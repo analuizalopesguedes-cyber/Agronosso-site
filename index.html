@@ -88,7 +88,7 @@ section{padding:88px 0;position:relative}
 .trust span{display:inline-flex;align-items:center;gap:8px}
 .trust svg{width:20px;height:20px}
 .hero-art{position:relative;display:grid;place-items:center;min-height:620px}
-.blob{position:absolute;inset:8% 4%;background:var(--verde);border-radius:48% 52% 44% 56%/52% 44% 56% 48%;animation:morph 14s ease-in-out infinite}
+.blob{position:absolute;inset:8% 4% 21%;background:var(--verde);border-radius:48% 52% 44% 56%/52% 44% 56% 48%;animation:morph 14s ease-in-out infinite}
 @keyframes morph{50%{border-radius:56% 44% 52% 48%/44% 56% 44% 56%}}
 .float{position:absolute;background:var(--papel-claro);border:1px solid var(--linha);border-radius:18px;padding:12px 16px;box-shadow:var(--sombra);font:500 calc(15px * var(--ts))/1.3 var(--texto);display:flex;gap:8px;align-items:center;animation:bob 5s ease-in-out infinite}
 .float svg{width:22px;height:22px;flex:none;color:var(--verde)}
@@ -1092,6 +1092,8 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
 
 .hero-art .pausa-btn{position:absolute;top:0;right:0;z-index:6;width:48px;height:48px;min-height:0;margin:0;padding:0;justify-content:center;background:var(--papel-claro)}
 .hero-art .pausa-btn svg{width:22px;height:22px}
+.hero-art .termo-nota{margin-top:28px;background:var(--papel,#f3efe2);padding:10px 16px;border-radius:16px}
+.hero-art .fs-btn{margin-top:16px}
 </style>
 </head>
 <body>
@@ -1763,14 +1765,14 @@ const screens=[
   <button type="button" class="ap-btn pri" data-soon="1">${ico('share')}Mandar para alguém da família</button>
   <p class="ap-disc">O AgroNosso ajuda a entender o papel, mas não decide por você e não substitui a orientação de um profissional.</p></div>${apLibras()}`}
 ];
-function bindScreen(root,go){
+function bindScreen(root,go,me){if(me===undefined)me=cur;
   $$('[data-go]',root).forEach(b=>b.addEventListener('click',()=>go(+b.dataset.go)));
   $$('[data-soon]',root).forEach(b=>b.addEventListener('click',()=>toast('Nesta prévia, siga os passos ao lado do celular.')));
   $$('.ap-acc>button',root).forEach(b=>b.addEventListener('click',()=>{const a=b.parentElement;a.classList.toggle('open');b.setAttribute('aria-expanded',a.classList.contains('open'))}));
   const opts=$$('.ap-opt',root),cont=$('#apCont',root);
   opts.forEach(o=>o.addEventListener('click',()=>{opts.forEach(x=>{x.classList.toggle('sel',x===o);x.setAttribute('aria-checked',x===o)});cont.disabled=false;$('#apHint',root).hidden=true}));
   const bar=$('#apBar',root);
-  if(bar){const L=$$('#apSteps li',root);let i=0;const tick=()=>{if(!document.body.contains(bar))return;L.forEach((l,k)=>l.classList.toggle('d',k<i));bar.style.width=Math.min(100,(i/L.length)*100)+'%';if(i<=L.length){i++;setTimeout(tick,900)}else{bar.style.width='100%';setTimeout(()=>{if(document.body.contains(bar)&&cur===3)go(4)},700)}};setTimeout(tick,300)}
+  if(bar){const L=$$('#apSteps li',root);let i=0;const tick=()=>{if(!document.body.contains(bar))return;L.forEach((l,k)=>l.classList.toggle('d',k<i));bar.style.width=Math.min(100,(i/L.length)*100)+'%';if(i<=L.length){i++;setTimeout(tick,900)}else{bar.style.width='100%';setTimeout(()=>{if(document.body.contains(bar)&&me===3)go(4)},700)}};setTimeout(tick,300)}
 }
 const META=[
  {titulo:'Tela inicial: uma pergunta e um caminho',txt:'Uma única pergunta e o caminho principal em destaque, “Entender um papel”. O resto fica logo abaixo, e os exemplos de treino mostram como o app funciona antes de usar um papel de verdade.',tag:'Minimalismo · Ponto focal'},
@@ -1925,7 +1927,7 @@ function fsRender(){
   const box=$('#fsBox');box.style.width=Math.round(390*k)+'px';box.style.height=Math.round(891*k)+'px';
   const sc=$('.screen',box);sc.style.setProperty('--k',k);
   sc.innerHTML='<div class="av swap">'+screens[fsI].html()+'</div>';
-  bindScreen(sc,i=>{fsI=i;if(fsFrom==='stage'){cur=i;renderPhone()}fsRender()});
+  bindScreen(sc,i=>{fsI=i;if(fsFrom==='stage'){cur=i;renderPhone()}fsRender()},fsI);
   $('#fsInfo').textContent='Tela '+(fsI+1)+' de 5: '+screens[fsI].nome;
 }
 function fsOpen(from){fsFrom=from;fsI=from==='stage'?cur:4;fsPrev=document.activeElement;const d=$('#fs');d.hidden=false;document.body.style.overflow='hidden';fsRender();$('#fsClose').focus()}
