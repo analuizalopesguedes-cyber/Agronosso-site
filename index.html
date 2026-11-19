@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>AgroNosso: entenda o papel antes de assinar</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23263F35'/><path d='M32 4 6 60h13l4-10h18l4 10h13L32 4Zm0 26 6 14H26l6-14Z' fill='%23F4EFE4'/><circle cx='52' cy='12' r='9' fill='%23E7A044'/></svg>"><rect width='64' height='64' rx='14' fill='%23263F35'/><path d='M32 12 14 52h9l3-8h12l3 8h9L32 12Zm0 18 4 10H28l4-10Z' fill='%23F4EFE4'/><circle cx='50' cy='14' r='6' fill='%23E7A044'/></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23263F35'/%3E%3Cpath d='M32 4 6 60h13l4-10h18l4 10h13L32 4Zm0 26 6 14H26l6-14Z' fill='%23F4EFE4'/%3E%3Ccircle cx='52' cy='12' r='9' fill='%23E7A044'/%3E%3C/svg%3E">
 <meta name="description" content="AgroNosso explica contratos e combinados em voz e palavras simples para pequenos produtores rurais. Projeto CitizenTech, FIAP Global Solution 2026.2.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1095,6 +1095,106 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
 .hero-art .pausa-btn svg{width:22px;height:22px}
 .hero-art .termo-nota{margin-top:28px;background:var(--papel,#f3efe2);padding:10px 16px;border-radius:16px}
 .hero-art .fs-btn{margin-top:16px}
+.curve-dica{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 auto 12px;width:max-content;max-width:100%;padding:10px 18px;border-radius:999px;background:var(--acafrao);color:var(--carvao);font:600 calc(16px * var(--ts))/1.3 var(--texto);text-align:center;animation:pulsa 2.2s ease-in-out infinite}
+@keyframes pulsa{50%{transform:scale(1.04)}}
+html.pausa .curve-dica{animation:none}
+.docfs iframe{width:min(1100px,100%);flex:1;min-height:0;border:0;border-radius:12px;background:#fff}
+.docfs .fs-info a{color:var(--papel);min-height:44px;display:inline-flex;align-items:center}
+.small-cards .vbox{margin-bottom:16px;width:100%}
+/* avaliação heurística: ajustes */
+.sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.fs .btn-line{color:var(--papel);border-color:var(--papel)}
+.fs-nav{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.fs-nav .btn{min-height:48px;padding:8px 20px}
+.fs-nav .btn[disabled]{opacity:.4;cursor:default}
+.fs-title{margin:0;color:var(--papel);font:600 calc(20px * var(--ts))/1.3 var(--titulo);text-align:center;padding:0 64px}
+.jornada .pt circle.halo{fill:none;stroke:var(--verde);stroke-width:3;stroke-dasharray:4 4;opacity:0}
+.jornada .pt:focus-visible circle.halo{opacity:1}
+.seg-j{margin:0 0 16px}
+.seg-j .lab{font:500 calc(16px * var(--ts)) var(--texto);color:var(--oliva);margin-right:8px;align-self:center;padding-left:12px}
+.jlist{display:none;list-style:none;margin:16px 0 0;padding:0;gap:8px}
+.jlist button{width:100%;display:flex;align-items:center;gap:12px;min-height:52px;padding:8px 16px;border-radius:16px;border:1.5px solid var(--linha);background:var(--papel);color:var(--carvao);font:400 calc(16px * var(--ts))/1.3 var(--texto);text-align:left;cursor:pointer}
+.jlist button .n{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;border:2px solid var(--verde);font:700 calc(16px * var(--ts)) var(--titulo);color:var(--carvao)}
+.jlist button b{font-weight:500;color:var(--verde)}
+.jlist button[aria-pressed=true]{border-color:var(--verde);background:var(--verde);color:var(--papel)}
+.jlist button[aria-pressed=true] b{color:var(--papel)}
+.jlist button[aria-pressed=true] .n{background:var(--acafrao);border-color:var(--acafrao)}
+@media (max-width:760px){.jlist{display:grid}.jornada svg.curve .lbl,.jornada svg.curve .nm{display:none}}
+.transc{max-height:420px;overflow:auto}
+.transc p{margin:0 0 12px}
+.pitch .resumo{background:transparent;border-color:rgba(244,239,228,.35)}
+.pitch .resumo summary{color:var(--papel)}
+.pitch .resumo p{color:var(--papel)}
+.pitch .ux{margin:0;font-size:calc(16px * var(--ts));color:#d9d2bf}
+.pitch .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pitch .camada{background:var(--papel);color:var(--verde)}
+.pitch .status.pronto{border-color:var(--papel);color:var(--papel)}
+.registros{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:32px 0 0}
+.trilha{list-style:none;margin:0 0 32px;padding:28px 16px 24px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));background:var(--papel-claro);border:1px solid var(--linha);border-radius:var(--r)}
+.trilha li{position:relative;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;font:500 calc(16px * var(--ts))/1.3 var(--texto);color:var(--carvao)}
+.trilha li b{position:relative;z-index:1;display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--verde);color:var(--papel);font:700 calc(26px * var(--ts))/1 var(--titulo)}
+.trilha li:last-child b{background:var(--acafrao);color:var(--carvao)}
+.trilha li+li::before{content:"";position:absolute;z-index:0;top:31px;right:50%;width:100%;height:2px;background:var(--verde);opacity:.35}
+.insights{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start;margin-bottom:24px}
+.insights .mel{grid-column:auto}
+.insights .mel>summary{min-height:72px}
+.insights .mel h4{font-size:calc(20px * var(--ts));line-height:1.3}
+.insights .mel h4>span{display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.mel h4 .code{display:inline-block;padding:0 10px;border-radius:99px;background:var(--acafrao);color:var(--carvao);font:500 calc(13px * var(--ts))/1.8 var(--texto)}
+.mel.ps{margin-bottom:24px}
+#sintese{scroll-margin-top:120px}
+@media (max-width:760px){
+  .insights{grid-template-columns:1fr}
+  .trilha{grid-template-columns:1fr;gap:16px;padding:20px 24px}
+  .trilha li{flex-direction:row;gap:16px;text-align:left}
+  .trilha li b{width:52px;height:52px;font-size:calc(22px * var(--ts));flex:none}
+  .trilha li+li::before{top:-16px;right:auto;left:25px;width:2px;height:16px}
+}
+/* botão de menu: o círculo é um span fixo, não depende do botão */
+.menu-btn{border:0!important;background:none!important;padding:0!important;font-size:calc(0px * var(--ts));line-height:0;-webkit-appearance:none;appearance:none;align-items:center;justify-content:center}
+@media (max-width:1180px){.menu-btn{display:inline-flex!important}}
+.menu-btn .mb-c{display:block;flex:none;box-sizing:border-box;width:48px;height:48px;min-width:48px;min-height:48px;border-radius:50%;border:2px solid var(--verde);background:var(--papel-claro);color:var(--verde);position:relative}
+.menu-btn .mb-c svg{position:absolute;top:50%;left:50%;width:24px;height:24px;margin:-12px 0 0 -12px}
+.menu-btn[aria-expanded=true] .mb-c{background:var(--verde);color:var(--papel)}
+.macc-b{display:contents}
+.macc:not(.open)>.macc-b{display:none}
+@media (min-width:761px){.macc.m>.macc-b{display:contents!important}}
+.macc-t{display:flex;align-items:center;gap:inherit;width:100%;min-height:44px;margin:0;padding:0;border:0;background:none;color:inherit;font:inherit;letter-spacing:inherit;text-align:left;cursor:pointer}
+.macc-t .macc-chev{margin-left:auto;flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%}
+.macc .macc-t .macc-chev svg{width:22px;height:22px;padding:0;background:none;border-radius:0;color:currentColor;transition:rotate .25s}
+.macc.open>*>.macc-t .macc-chev svg,.macc.open>.macc-t .macc-chev svg{rotate:180deg}
+.macc-x{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;min-height:48px;padding:10px 16px;border:1.5px solid var(--verde);border-radius:999px;background:transparent;color:var(--verde);font:500 calc(16px * var(--ts))/1.3 var(--texto);text-align:left;cursor:pointer}
+.macc-x svg{width:20px;height:20px;flex:none;transition:rotate .25s}
+.macc.open>.macc-x svg{rotate:180deg}
+.macc-x[hidden]{display:none}
+.tcard .mudou .macc-t{color:var(--acafrao)}
+.macc:not(.open).cell{padding-top:16px;padding-bottom:16px}
+.macc:not(.open).cell h4{margin:0}
+.empatia{align-items:start}
+.empatia .q.macc:not(.open){padding-top:16px;padding-bottom:16px}
+.empatia .q.macc:not(.open) h4{border-bottom:0;padding-bottom:0;margin:0}
+.empatia .q.ganho .macc-t{color:var(--acafrao)}
+.j-top{display:flex;align-items:center;justify-content:space-between;gap:12px 24px;flex-wrap:wrap;margin-bottom:16px}
+.j-top .seg-j{margin:0}
+.j-top .curve-dica{margin:0;width:auto;max-width:100%;padding:8px 16px;border-radius:999px;background:rgba(231,160,68,.22);color:var(--carvao);font:500 calc(15px * var(--ts))/1.3 var(--texto);animation:none;justify-content:flex-start;text-align:left}
+.m-only{display:none}
+@media (max-width:760px){
+  .m-only{display:inline}.d-only{display:none}
+  .j-top{flex-direction:column;align-items:stretch;gap:12px}
+  .j-top .seg-j{display:flex;width:100%}
+  .j-top .seg-j .lab{display:none}
+  .j-top .seg-j button{flex:1;white-space:nowrap;padding:8px 12px}
+  .j-top .curve-dica{align-self:flex-start}
+  .jornada svg.curve{margin-bottom:-11%}
+}
+.ponte{max-width:none}
+.testes{align-items:stretch}
+.tcard{height:100%;box-sizing:border-box}
+.tcard .relato{max-width:none;min-height:72px;align-items:center;margin:0}
+.tcard dl{flex:1}
+.tcard dl>.mudou{margin-top:auto}
+.tcard header{min-height:56px}
+.ficha{align-items:start}
 </style>
 </head>
 <body>
@@ -1162,7 +1262,7 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
       <h1 id="h-hero" class="rv d1">Entenda o papel <em>antes de assinar.</em></h1>
       <p class="lead rv d2">O AgroNosso lê o documento e explica em voz alta, em palavras do dia a dia. Sem juridiquês e sem vergonha de perguntar.</p>
       <div class="hero-cta rv d3">
-        <a class="btn btn-main app-link" href="#" data-ic="camera">Abrir o aplicativo</a>
+        <a class="btn btn-main app-link" href="#" data-ic="phone">Abrir o aplicativo</a>
         <a class="btn btn-line" href="#solucao" data-ic="book">Ver como funciona</a>
         <a class="btn btn-line" href="#pitch" data-ic="play">Ver o pitch</a>
       </div>
@@ -1202,10 +1302,10 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
 <!-- Interesse: 3 passos -->
 <section class="como" aria-labelledby="h-como">
   <div class="wrap">
-    <div class="sec-head" style="margin-bottom:48px"><h2 id="h-como" class="rv">Três passos. Nenhum precisa de ajuda.</h2></div>
+    <div class="sec-head" style="margin-bottom:48px"><h2 id="h-como" class="rv">Três passos simples, do seu jeito.</h2></div>
     <div class="tres">
-      <article class="rv"><span class="num" aria-hidden="true">1</span><div class="ic" data-ic="camera" aria-hidden="true"></div><h3>Fotografe o papel</h3><p>Aponte o celular. A moldura mostra se o papel está inteiro e com luz.</p></article>
-      <article class="rv d1"><span class="num" aria-hidden="true">2</span><div class="ic" data-ic="doc" aria-hidden="true"></div><h3>Espere a leitura</h3><p>Em poucos segundos o AgroNosso lê as letras e mostra o que está acontecendo.</p></article>
+      <article class="rv"><span class="num" aria-hidden="true">1</span><div class="ic" data-ic="camera" aria-hidden="true"></div><h3>Fotografe o papel</h3><p>Diga de que lado do acordo você está e aponte o celular. O app mostra, passo a passo, como tirar uma boa foto.</p></article>
+      <article class="rv d1"><span class="num" aria-hidden="true">2</span><div class="ic" data-ic="doc" aria-hidden="true"></div><h3>Espere a leitura</h3><p>Em até 1 minuto o AgroNosso lê as letras e mostra o que está fazendo enquanto isso.</p></article>
       <article class="rv d2"><span class="num" aria-hidden="true">3</span><div class="ic" data-ic="ear" aria-hidden="true"></div><h3>Ouça ou leia</h3><p>Valor, prazo, quem paga e como sair, parte por parte. Do seu jeito: em voz ou em texto.</p></article>
     </div>
   </div>
@@ -1217,7 +1317,7 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
     <div class="sec-head">
       <p class="eyebrow rv"><b>1</b> Ficha de Produto CitizenTech</p>
       <h2 id="h-ficha" class="rv">O AgroNosso em uma página</h2>
-      <p class="lead rv">Tudo o que o produto é, para quem é e o que ele muda.</p>
+      <p class="lead rv">Tudo o que o produto é, para quem é e o que ele muda. Toque em cada item para abrir.</p>
     </div>
     <div class="ficha">
       <div class="cell c6 hl rv"><h4 data-ic="alert">Problema, em uma frase</h4><p>Pequenos produtores assinam e combinam de boca sem entender o valor total, o prazo, quem paga o quê e como sair.</p></div>
@@ -1227,7 +1327,7 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
       <div class="cell c3 rv d1"><h4 data-ic="phone">Pontos de contato</h4><ul><li>Aplicativo AgroNosso, no celular</li><li>AgroNosso Voz, o aparelho que grava o combinado</li><li>Site, vídeo e campanha de lançamento</li></ul></div>
       <div class="cell c2 rv"><h4 data-ic="spark">Tecnologias empregadas</h4><ul><li>IA para simplificar textos</li><li>Leitura de documentos (OCR)</li><li>Áudio para ouvir tudo</li><li>Bluetooth no aparelho</li></ul></div>
       <div class="cell c2 rv d1"><h4 data-ic="users">Ecossistema</h4><p>Filhos e netos, sindicato, associação, cooperativa, cartório e técnico de extensão rural.</p></div>
-      <div class="cell c2 rv d2"><h4 data-ic="search">Evidências</h4><ul><li>12 entrevistas de campo</li><li>2 personas e mapas de empatia</li><li>Jornada atual mapeada</li><li>Teste de uso com 2 produtores, 2 entrevistas e 20 melhorias (seção 4)</li></ul></div>
+      <div class="cell c2 rv d2"><h4 data-ic="search">Evidências</h4><ul><li>12 conversas de campo (entrevistas)</li><li>2 personas e mapas de empatia</li><li>Jornada atual mapeada</li><li>Síntese com 10 insights e 10 oportunidades (<a href="#sintese">ver</a>)</li><li>Teste com 4 produtores e 20 melhorias (<a href="#teste">ver a seção 4</a>)</li></ul></div>
       <div class="cell c3 rv"><h4 data-ic="chart">Indicadores de impacto</h4><p data-edit="indicadores">As pessoas que moram no campo e testaram o app mostraram entender melhor os documentos, entenderam para que o app serve e recomendariam a alguém próximo.</p><p class="aux ev">No teste, P2 entendeu para que o AgroNosso serve, disse que a parte mais fácil foi “a voz explicando” e recomendaria a alguém próximo. P1 gostou de ouvir as perguntas e as explicações durante as etapas. <a href="#teste">Ver os registros</a></p></div>
       <div class="cell c3 rv d1"><h4 data-ic="globe">ODS conectados</h4>
         <div class="ods"><span><b>10</b>Redução das desigualdades</span><span><b>9</b>Inovação e infraestrutura</span><span><b>2</b>Fome zero e agricultura sustentável</span></div></div>
@@ -1255,8 +1355,8 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
     <div class="sec-head">
       <p class="eyebrow rv"><b>2</b> Pesquisa</p>
       <h2 id="h-pesq" class="rv">Primeiro a gente ouviu</h2>
-      <p class="lead rv">12 conversas de campo e duas pessoas que representam o que ouvimos: Zé e Dona Dora.</p>
-      <p class="guia rv">Esta seção tem 3 partes: as pessoas, o mapa de empatia (toque nas abas) e a jornada de hoje.</p>
+      <p class="lead rv">12 conversas de campo, com as mesmas 19 perguntas, e duas pessoas que representam o que ouvimos: Zé e Dona Dora.</p>
+      <p class="guia rv">Esta seção tem 4 partes: as pessoas, o mapa de empatia (toque nas abas), a jornada de hoje e o que a pesquisa revelou.</p>
     </div>
     <div class="personas">
       <article class="persona rv">
@@ -1271,7 +1371,7 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
       </article>
     </div>
 
-    <div class="subhead rv"><span class="sh-ic" data-ic="users" aria-hidden="true"></span><div><p class="sh-k">Entendendo as pessoas</p><h3 id="h-emp">Mapa de empatia</h3><p class="d">O que cada pessoa pensa, sente, vê e ouve no dia a dia, e o que a trava na hora do papel.</p></div></div>
+    <div class="subhead rv"><span class="sh-ic" data-ic="users" aria-hidden="true"></span><div><p class="sh-k">Entendendo as pessoas</p><h3 id="h-emp">Mapa de empatia</h3><p class="d">O que cada pessoa pensa, sente, vê e ouve no dia a dia, e o que a trava na hora do papel. Toque em cada parte para abrir.</p></div></div>
     <div class="seg rv" role="group" aria-label="Escolher pessoa">
       <button type="button" data-p="ze" aria-pressed="true">Zé</button>
       <button type="button" data-p="dora" aria-pressed="false">Dona Dora</button>
@@ -1279,11 +1379,21 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
     <div class="empatia" id="empatia" aria-live="polite"></div>
     <p class="tensao rv" id="tensao"></p>
 
-    <div class="subhead rv"><span class="sh-ic" data-ic="flag" aria-hidden="true"></span><div><p class="sh-k">Como é hoje</p><h3>Jornada atual</h3><p class="d">Do primeiro sinal até o depois. Em quase nenhuma etapa a pessoa se sente bem hoje. Toque em cada ponto da curva para ver o atrito e a oportunidade.</p></div></div>
+    <div class="subhead rv"><span class="sh-ic" data-ic="flag" aria-hidden="true"></span><div><p class="sh-k">Como é hoje</p><h3>Jornada atual de <span class="jname">Zé</span></h3><p class="d">Do primeiro sinal até o depois. Em quase nenhuma etapa a pessoa se sente bem hoje.</p></div></div>
     <div class="jornada rv">
+      <div class="j-top"><div class="seg seg-j" role="group" aria-label="Ver a jornada de"><span class="lab" aria-hidden="true">Jornada de</span><button type="button" data-p="ze" aria-pressed="true">Zé</button><button type="button" data-p="dora" aria-pressed="false">Dona Dora</button></div>
+      <p class="curve-dica"><span aria-hidden="true">👆</span><span class="d-only">Clique nas bolinhas para ver o atrito e a oportunidade de cada etapa</span><span class="m-only">Toque numa etapa da lista</span></p></div>
       <svg class="curve" id="curve" viewBox="0 0 720 370" role="group" aria-label="Curva de emoções da jornada"></svg>
+      <ol class="jlist" id="jlist" aria-label="Etapas da jornada"></ol>
       <div class="jdet" id="jdet" aria-live="polite"></div>
     </div>
+
+    <div class="subhead rv" id="sintese"><span class="sh-ic" data-ic="spark" aria-hidden="true"></span><div><p class="sh-k">Síntese da pesquisa</p><h3>Da escuta às oportunidades</h3><p class="d">O que dói, o que a pessoa precisa, o que a gente entendeu e o que o AgroNosso pode fazer. Toque em cada insight para ver as falas.</p></div></div>
+    <ol class="trilha rv" aria-label="Trilha da síntese"><li><b>12</b>conversas</li><li><b>9</b>dores</li><li><b>9</b>necessidades</li><li><b>10</b>insights</li><li><b>10</b>oportunidades</li></ol>
+    <div class="insights"><details class="mel rv"><summary><h4 data-ic="book"><span><b class="code">Insight 1</b> O problema não é só ler, é o vocabulário jurídico</span></h4></summary><ul><li><strong>O que ouvimos.</strong> Mesmo quem lê bem trava em termos como “franquia, garantia, vencimento antecipado” (P10) e “carência, juros, correção” (P9).</li><li><b>Oportunidade 1</b> Explicar cada termo com exemplos do dia a dia rural.</li></ul></details><details class="mel rv"><summary><h4 data-ic="coin"><span><b class="code">Insight 2</b> O prejuízo aparece no custo, no prazo ou na condição</span></h4></summary><ul><li><strong>O que ouvimos.</strong> P9 pagou, com os juros, mais do que imaginava. P12 só recebeu depois da colheita. P4 tinha um prazo de boca diferente do que o dono entendia.</li><li><b>Oportunidade 2</b> Mostrar primeiro o valor total, os prazos e quem paga o quê.</li></ul></details><details class="mel rv"><summary><h4 data-ic="talk"><span><b class="code">Insight 3</b> Sem papel, o risco muda de lugar</span></h4></summary><ul><li><strong>O que ouvimos.</strong> P4 perdeu uma área e hoje ouve “enquanto der”. P7 não sabe como “regularizar” a terra.</li><li><b>Oportunidade 9</b> Perguntas-guia para quem tem acordo de boca ou terra sem escritura.</li></ul></details><details class="mel rv"><summary><h4 data-ic="users"><span><b class="code">Insight 4</b> A confiança vem de pessoas e instituições conhecidas</span></h4></summary><ul><li><strong>O que ouvimos.</strong> P7 mandaria a foto “se o pessoal do sindicato dissesse que é seguro”. P9, só se alguém da associação confirmar. P12 prefere o cartório e o filho.</li><li><b>Oportunidade 5</b> Explorar o apoio de sindicato, associação ou cooperativa, e deixar compartilhar com alguém de confiança.</li></ul></details><details class="mel rv"><summary><h4 data-ic="lock"><span><b class="code">Insight 5</b> As dúvidas sobre privacidade se repetem</span></h4></summary><ul><li><strong>O que ouvimos.</strong> P10 quer saber onde fica guardado, quem acessa e se dá para apagar. P11 pergunta da LGPD e do treino de IA. P3 quer saber quem é a empresa.</li><li><b>Oportunidade 4</b> Antes de pedir a foto, dizer quem somos, o que fazemos com o dado, quem acessa e como apagar.</li></ul></details><details class="mel rv"><summary><h4 data-ic="search"><span><b class="code">Insight 6</b> O app é primeira leitura, não decisão final</span></h4></summary><ul><li><strong>O que ouvimos.</strong> “No máximo, como primeira leitura” (P10). “Primeira triagem” (P11). P6 confirma com a técnica.</li><li><b>Oportunidade 6</b> Mostrar de onde vem a explicação, o que o app não sabe e quando procurar um profissional.</li></ul></details><details class="mel rv"><summary><h4 data-ic="ear"><span><b class="code">Insight 7</b> A voz atende a alguns, não a todos</span></h4></summary><ul><li><strong>O que ouvimos.</strong> P1 só aceitaria com áudio. “Só ouvir eu esqueço” (P3). P5 se cansa de áudio longo. P6 e P11 querem texto.</li><li><b>Oportunidade 3</b> Voz em trechos curtos, sempre com o texto junto.</li></ul></details><details class="mel rv"><summary><h4 data-ic="phone"><span><b class="code">Insight 8</b> O sinal define o desenho do app</span></h4></summary><ul><li><strong>O que ouvimos.</strong> “Se não tem sinal, nem adianta” (P7). P4 teme gastar o pacote de dados. P3 teme perder o que já fez.</li><li><b>Oportunidade 7</b> Gastar pouco dado e retomar do ponto em que parou.</li></ul></details><details class="mel rv"><summary><h4 data-ic="user"><span><b class="code">Insight 9</b> Quem ajuda também limita</span></h4></summary><ul><li><strong>O que ouvimos.</strong> O patrão “explicou por cima e eu confiei” (P8). P9 precisou pedir duas vezes. P7 depende da neta, “quando ela vem”.</li><li><b>Hipótese a testar</b> Dar ao produtor uma leitura própria, sem tirar a pessoa de confiança da conversa.</li></ul></details><details class="mel rv"><summary><h4 data-ic="alert"><span><b class="code">Insight 10</b> Há quem não veja necessidade</span></h4></summary><ul><li><strong>O que ouvimos.</strong> “Não vejo necessidade, porque já tenho a quem perguntar” (P5). “Na minha idade, não quero aprender” (P12).</li><li><b>Oportunidade 8</b> Letra grande, poucos passos e sem criar conta, sem forçar quem já tem apoio.</li></ul></details></div>
+    <details class="mel ps rv"><summary><h4 data-ic="q"><span>As 5 perguntas que guiaram o projeto</span></h4></summary><ul><li><b>Pergunta 1</b> Como poderíamos ajudar pequenos produtores que assinam contratos de arrendamento, parceria ou financiamento a entender custos, prazos e responsabilidades antes de assinar, considerando que o vocabulário jurídico os trava, mesmo quando leem bem?</li><li><b>Pergunta 2</b> Como poderíamos ajudar produtores com acordo de boca ou terra sem escritura a saber que perguntas fazer sobre prazo e direitos, considerando que não há documento para o app ler?</li><li><b>Pergunta 3</b> Como poderíamos ajudar produtores cautelosos com golpes a decidir se enviam um documento ao app, considerando que temem o destino dos dados e só confiam em quem já conhecem?</li><li><b>Pergunta 4</b> Como poderíamos ajudar produtores com pouca prática no celular ou na leitura a receber explicações no formato que funciona para eles (voz, texto ou conversa), considerando sinal instável, pouco dado e medo de errar?</li><li><b>Pergunta 5</b> Como poderíamos ajudar produtores que querem uma primeira leitura de um contrato a saber o que o app pode e não pode afirmar, considerando que temem explicação errada e não saber quem responde?</li></ul></details>
+    <p class="nota rv" data-ic="info"><span><strong>Como ler.</strong> As falas vêm das entrevistas. Insights e oportunidades são leituras da equipe, e o que está como hipótese ainda precisa ser testado. 12 conversas não representam toda a população rural.</span></p>
+    <div class="acoes registros rv"><button type="button" class="btn btn-verde doc-open" data-pdf="assets/sintese-pesquisa.pdf" data-title="Síntese de UX Research do AgroNosso" data-dl="assets/sintese-pesquisa.pdf" data-ic="expand" aria-haspopup="dialog">Ver a síntese completa</button><a class="btn btn-line" href="assets/sintese-pesquisa.pdf" download data-ic="download">Baixar a síntese (PDF, 3,3 MB)</a><a class="btn btn-line" href="https://fiapcom-my.sharepoint.com/:u:/g/personal/rm564048_fiap_com_br/IQCdWcWo-16XTaq37MK55UEmAUL057eZixp6yXtUWjy1qog?e=9lwt5P" target="_blank" rel="noopener" data-ic="ext">Ver o quadro no Miro<span class="sr"> (abre em outra aba)</span></a></div>
   </div>
 </section>
 
@@ -1294,11 +1404,11 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
       <p class="eyebrow rv"><b>3</b> A solução</p>
       <h2 id="h-sol" class="rv">Do papel à explicação, passo a passo</h2>
       <p class="lead rv">Experimente o fluxo principal do app: quem é você, foto, leitura e explicação.</p>
-      <p class="guia rv">Siga as 5 telas pelo celular ou pelos números ao lado dele.</p>
+      <p class="guia rv">Siga as 5 telas tocando nos botões do celular ou nos números das etapas.</p>
     </div>
     <div class="grid">
       <div class="stage rv">
-        <div class="phone"><div class="screen" id="phoneScreen" aria-live="polite"></div>
+        <div class="phone"><div class="screen" id="phoneScreen"></div>
           <div class="vslot" id="appVideoSlot" hidden style="inset:10px;border-radius:34px"></div>
         </div>
         <button type="button" class="fs-btn" id="fsStage"></button>
@@ -1306,7 +1416,7 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
       </div>
       <div class="flow rv d1">
         <ol class="stepper" id="stepper" aria-label="Etapas do fluxo"></ol>
-        <div class="explain" id="explain"></div>
+        <div class="explain" id="explain" aria-live="polite"></div>
         <div class="nav-btns">
           <button class="btn btn-line" id="prev" type="button">Voltar</button>
           <button class="btn btn-main" id="next" type="button">Próxima tela</button>
@@ -1322,18 +1432,18 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
   <div class="wrap">
     <div class="sec-head">
       <p class="eyebrow rv"><b>4</b> Teste</p>
-      <h2 id="h-teste" class="rv">Dois produtores testaram o app e dois foram ouvidos. A gente mudou.</h2>
-      <p class="lead rv">Em novembro de 2026, duas pessoas ouvidas na pesquisa usaram o app e contaram onde travaram. Outras duas foram ouvidas em entrevista. Cada ponto virou uma melhoria.</p>
+      <h2 id="h-teste" class="rv">Quatro produtores participaram do teste. A gente mudou.</h2>
+      <p class="lead rv">Em novembro de 2026, quatro pessoas ouvidas na pesquisa (P1, P2, P4 e P11) participaram do teste com o app. Cada ponto virou uma melhoria.</p>
     </div>
     <div class="metodo rv">
-      <div><b>Como testamos</b>Primeira tentativa de teste de usabilidade, com observações registradas pela equipe.</div>
+      <div><b>Como testamos</b>Primeira tentativa de teste de usabilidade com 4 pessoas da pesquisa, com uma ficha de observação para cada uma.</div>
       <div><b>O que registramos</b>O que a pessoa gostou, onde teve dificuldade e o que sugeriu. O que não foi registrado fica de fora, sem suposição.</div>
       <div><b>O que fizemos depois</b>As observações viraram 20 melhorias (M01 a M20), já aplicadas no protótipo.</div>
     </div>
     <div class="testes" id="testes">
       <article class="tcard real rv">
         <header><div class="avatar" aria-hidden="true">P1</div><div><h3>Produtor P1</h3><p class="aux">Vitória da Conquista (BA)</p></div></header>
-        
+        <p class="relato" data-ic="check">No teste, usou as telas do app, e a equipe registrou onde travou.</p>
         <dl>
           <div><dt>Quem é</dt><dd>Trabalha para um agricultor de café e planta tomate, abóbora, cebolinha e coentro. Celular simples com dados pré-pagos.</dd></div>
           <div><dt>O que funcionou</dt><dd><ul><li>Gostou de ouvir as perguntas e as explicações durante as etapas.</li></ul></dd></div>
@@ -1343,7 +1453,7 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
       </article>
       <article class="tcard real rv">
         <header><div class="avatar" aria-hidden="true">P2</div><div><h3>Produtor P2</h3><p class="aux">Caldeirão Grande (BA)</p></div></header>
-        
+        <p class="relato" data-ic="check">No teste, usou as telas do app, e a equipe registrou onde travou.</p>
         <dl>
           <div><dt>Quem é</dt><dd>Trabalha na própria terra e em terras de parentes. Usa TikTok e Facebook para buscar informação e o celular só à noite.</dd></div>
           <div><dt>O que funcionou</dt><dd><ul><li>A parte mais fácil foi a voz explicando.</li><li>Entendeu para que o AgroNosso serve.</li><li>Apontou as perguntas frequentes como acerto e recomendaria a alguém próximo.</li></ul></dd></div>
@@ -1352,8 +1462,8 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
         </dl>
       </article>
       <article class="tcard real rv">
-        <header><div class="avatar" aria-hidden="true">P4</div><div><h3>Produtor P4</h3><p class="aux">Agreste de Pernambuco</p></div></header>
-        <p class="relato" data-ic="alert">Relato da entrevista. O uso do app por ela ainda não foi registrado.</p>
+        <header><div class="avatar" aria-hidden="true">P4</div><div><h3>Produtora P4</h3><p class="aux">Agreste de Pernambuco</p></div></header>
+        <p class="relato" data-ic="info">No teste, a equipe registrou os hábitos e as necessidades dela, não o uso de cada tela.</p>
         <dl>
           <div><dt>Quem é</dt><dd>Vende hortaliças na feira. Arrenda uma área de proprietário que não mora no local, combinada de boca. Celular simples com dados pré-pagos.</dd></div>
           <div><dt>O que funcionou</dt><dd><ul><li>Usa muito o celular no trabalho: WhatsApp, fotos, vídeos para aprender e Pix.</li><li>Entende melhor quando falam com ela. Da foto não tem muito medo, “se for coisa de confiança”.</li></ul></dd></div>
@@ -1363,7 +1473,7 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
       </article>
       <article class="tcard real rv">
         <header><div class="avatar" aria-hidden="true">P11</div><div><h3>Produtor P11</h3><p class="aux">Região serrana de São Paulo</p></div></header>
-        <p class="relato" data-ic="alert">Relato da entrevista. O uso do app por ele ainda não foi registrado.</p>
+        <p class="relato" data-ic="info">No teste, a equipe registrou os hábitos e as necessidades dele, não o uso de cada tela.</p>
         <dl>
           <div><dt>Quem é</dt><dd>Vende morango e hortaliças em feira e por WhatsApp. Sítio próprio, comprado há 4 anos. Usa bem a tecnologia.</dd></div>
           <div><dt>O que funcionou</dt><dd><ul><li>Usaria para “entender um documento antes de levar ao advogado”, como primeira triagem.</li><li>Gosta de ler e voltar ao trecho que importa.</li></ul></dd></div>
@@ -1374,15 +1484,16 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
     </div>
 
     <div class="subhead rv"><span class="sh-ic" data-ic="spark" aria-hidden="true"></span><div><p class="sh-k">Depois dos testes</p><h3>20 melhorias no app</h3><p class="d">Cada código (M01 a M20) liga o que uma pessoa disse ou fez ao que mudou na tela.</p></div></div>
-    <div class="melhorias">
-      <details class="mel rv" open><summary><h4 data-ic="eye">Leitura mais fácil</h4></summary><ul><li><b>M01</b> <strong>Letra maior.</strong> A letra do app ficou maior, e os textos da tela inicial ainda mais.</li><li><b>M02</b> <strong>Ajuste de letra fácil de achar.</strong> “Tamanho da letra” (A, A+, A++) fica na tela inicial e já aparece na primeira tela de boas-vindas.</li><li><b>M13</b> <strong>Conteúdo em texto.</strong> Dá para ler a explicação inteira de uma vez e copiar o texto.</li><li><b>M15</b> <strong>Menos digitação.</strong> Os campos lembram que dá para falar pelo microfone do teclado.</li></ul></details>
-      <details class="mel rv"><summary><h4 data-ic="check">Confiança na leitura</h4></summary><ul><li><b>M05</b> <strong>Datas.</strong> O app reconhece mais formatos e procura a data de assinatura. Se não acha, diz “não achamos no texto lido”, e não “o papel não tem”.</li><li><b>M06 e M16</b> <strong>Conferir antes da explicação.</strong> Depois da foto vem “Confira o que o app leu”. O texto pode ser corrigido antes e depois.</li><li><b>M11</b> <strong>Destaque para o que pesa.</strong> Um cartão reúne valor, prazo, datas de pagamento, data de assinatura e quem paga o quê.</li><li><b>M12</b> <strong>Apoio, não decisão.</strong> Um aviso no topo diz que a explicação é um apoio e que a leitura pode errar.</li></ul></details>
+    <div class="melhorias" id="melhorias">
+      <details class="mel rv"><summary><h4 data-ic="eye">Leitura mais fácil</h4></summary><ul><li><b>M01</b> <strong>Letra maior.</strong> A letra do app ficou maior, e os textos da tela inicial ainda mais.</li><li><b>M02</b> <strong>Ajuste de letra fácil de achar.</strong> “Tamanho da letra” (A, A+, A++) fica na tela inicial e já aparece na primeira tela de boas-vindas.</li><li><b>M13</b> <strong>Conteúdo em texto.</strong> Dá para ler a explicação inteira de uma vez e copiar o texto.</li><li><b>M15</b> <strong>Menos digitação.</strong> Os campos lembram que dá para falar pelo microfone do teclado.</li></ul></details>
+      <details class="mel rv"><summary><h4 data-ic="check">Confiança na leitura</h4></summary><ul><li><b>M05</b> <strong>Datas.</strong> O app reconhece mais formatos e procura a data de assinatura. Se não acha, diz “não achamos no texto lido”, e não “o papel não tem”.</li><li><b>M06</b> <strong>Conferir antes da explicação.</strong> Depois da foto vem “Confira o que o app leu”. O texto pode ser corrigido antes e depois (veja também M16, em “Decidir com quem a pessoa confia”).</li><li><b>M11</b> <strong>Destaque para o que pesa.</strong> Um cartão reúne valor, prazo, datas de pagamento, data de assinatura e quem paga o quê.</li><li><b>M12</b> <strong>Apoio, não decisão.</strong> Um aviso no topo diz que a explicação é um apoio e que a leitura pode errar.</li></ul></details>
       <details class="mel rv"><summary><h4 data-ic="lock">Privacidade e internet</h4></summary><ul><li><b>M07</b> <strong>Antes da foto.</strong> O app explica quem o criou, o que acontece com a foto (é lida no próprio aparelho e não é enviada), quem vê, que nada treina inteligência artificial, por quanto tempo o texto fica guardado e como apagar.</li><li><b>M14</b> <strong>Poucos dados.</strong> O app avisa antes de usar a internet na primeira leitura e deixa baixar o leitor de letras antes, no Wi-Fi. A Libras só carrega quando a pessoa toca no botão.</li></ul></details>
       <details class="mel rv"><summary><h4 data-ic="search">Navegação mais clara</h4></summary><ul><li><b>M03</b> <strong>Papéis lidos.</strong> “Papéis recentes” virou “Papéis que você já leu”. As perguntas avisam que não são respostas do app.</li><li><b>M04</b> <strong>Primeiro uso.</strong> Os exemplos de treino não ficam mais guardados em Papéis.</li><li><b>M09</b> <strong>Para que serve.</strong> Uma frase no topo da tela inicial diz o que o AgroNosso faz.</li><li><b>M10</b> <strong>Da foto à explicação.</strong> Os passos são Foto, Conferir e Explicação, e cada etapa avisa o que vem depois.</li><li><b>M17</b> <strong>Perguntas frequentes.</strong> “Como usar” ganhou dúvidas como “O app pode errar?” e “E se o acordo foi só de boca?”.</li></ul></details>
       <details class="mel rv"><summary><h4 data-ic="users">Decidir com quem a pessoa confia</h4></summary><ul><li><b>M08</b> <strong>Voz.</strong> A leitura em voz continua em todas as telas.</li><li><b>M18</b> <strong>Compartilhar.</strong> O botão “Mandar para alguém de confiança” fica logo abaixo do resumo.</li><li><b>M16</b> <strong>Ver antes de enviar.</strong> Antes de compartilhar, a pessoa vê o texto que vai ser enviado.</li><li><b>M19</b> <strong>Perguntas prontas.</strong> Em tom neutro, para levar à outra parte. Para acordos sem papel, o app aponta para “Anotar um combinado de boca”.</li><li><b>M20</b> <strong>O valor é justo?</strong> A explicação diz a quem perguntar (sindicato, cooperativa, Emater) e o que a lei do campo costuma dizer, sem preço de mercado sem fonte.</li></ul></details>
     </div>
-    <p class="nota rv" data-ic="info"><span><strong>Sobre as etapas do app.</strong> O app seguiu evoluindo depois destes testes. O fluxo da seção 3 (Quem é você, Foto, Leitura e Explicação) é a versão mais recente, e os nomes das etapas em M06, M10 e M16 são os da época do teste.</span></p>
+    <p class="nota rv" data-ic="info"><span><strong>Sobre as etapas.</strong> O fluxo da seção 3 é a versão mais recente do app. Os nomes de etapa em M06, M10 e M16 são da época do teste.</span></p>
     <p class="nota rv" data-ic="alert"><span><strong>O que ainda falta.</strong> Essas melhorias já estão no protótipo, mas ainda não foram verificadas com usuários. O próximo passo é um novo teste.</span></p>
+    <div class="acoes registros rv"><a class="btn btn-verde" href="https://fiapcom-my.sharepoint.com/:u:/g/personal/rm564048_fiap_com_br/IQBBDLYYnhw8SJ4kZ2El6TbkAcUwGagJx6bkb30Zw9fY3OI?e=mWIhul" target="_blank" rel="noopener" data-ic="ext">Ver os documentos do teste (Drive)<span class="sr"> (abre em outra aba)</span></a></div>
     <p class="ponte rv"><a class="btn btn-line" href="#entregas" data-ic="flag">Veja o que entregamos em cada disciplina</a></p>
   </div>
 </section>
@@ -1393,11 +1504,11 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
     <div class="sec-head">
       <p class="eyebrow rv"><b>5</b> Entregas</p>
       <h2 id="h-ent" class="rv">Tudo o que o grupo produziu</h2>
-      <p class="lead rv">Esta é a vitrine do grupo: aqui ficam os trabalhos de cada disciplina da Global Solution. Uma solução, sete camadas, e cada camada é a parte que uma disciplina construiu.</p>
+      <p class="lead rv">Uma solução, sete camadas: cada disciplina da Global Solution construiu uma parte. A camada Experiência é este site, com o vídeo pitch.</p>
     </div>
 
     <nav class="ancoras rv" aria-label="Ir direto para uma entrega"><span>Ir para:</span>
-      <a href="#pitch" data-ic="play">Vídeo pitch</a><a href="#e-motion">Motion</a><a href="#e-prod">Produto</a><a href="#e-film">Filmmaking</a><a href="#e-3d">3D Experience</a><a href="#e-media">Alcance</a><a href="#e-vfx">VFX</a>
+      <a href="#pitch" data-ic="play">UX e vídeo pitch</a><a href="#e-motion">Motion Graphics</a><a href="#e-prod">Product Design</a><a href="#e-film">Filmmaking</a><a href="#e-3d">3D Experience</a><a href="#e-media">Creator Economy</a><a href="#e-vfx">3D Animation e VFX</a>
     </nav>
 
     <div class="edit-bar" role="region" aria-label="Links da equipe">
@@ -1415,10 +1526,13 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
     <article class="pitch verde on-verde rv" id="pitch" aria-labelledby="h-pitch">
       <div class="vbox" id="pitchBox"></div>
       <div class="txt">
-        <span class="status prod" data-ic="clock" style="align-self:flex-start">Vídeo pitch em produção</span>
+        <div class="meta"><span class="camada">Experiência</span><span class="status pronto" data-ic="check">Vídeo pronto</span></div>
         <h3 id="h-pitch" style="font-size:calc(32px * var(--ts))">Vídeo pitch</h3>
-        <p>Toda a solução em até 5 minutos: o problema, o AgroNosso funcionando, as sete camadas, o que o teste mostrou e o impacto esperado.</p>
-        <div class="acoes"><a class="btn btn-main app-link" href="#" data-ic="phone">Abrir o aplicativo</a></div>
+        <p class="ux">User Experience &amp; UI Designer: este site e o vídeo pitch.</p>
+        <p>Toda a solução em um vídeo: o problema, o AgroNosso funcionando, as sete camadas, o que o teste mostrou e o impacto esperado.</p>
+        <p class="aux">7 min 32 s, com legenda na imagem. A transcrição está logo abaixo.</p>
+        <details class="resumo"><summary>Ler a transcrição do vídeo</summary><div class="transc"><p>O trabalho de quem planta começa muito antes da colheita. Começa na hora de decidir em qual terra plantar, em quais condições, por quanto tempo e com quem. E é justamente aí que muita gente tem na frente um papel para aceitar, sem ter certeza do que está aceitando. Eu sou a Vitória e junto com a Bruna e a Ana vamos apresentar a nossa solução, o nosso projeto de design digital na FIAP, o desafio Citizen Tech Global Solution 2026.</p><p>Assinar não significa compreender. Quando perguntamos a um trabalhador rural da Bahia se já tinha faltado informação na hora de decidir, ele respondeu que já aconteceu de não entender o que tava escrito. Em outro momento contou que assinou um documento sobre um lote sem compreender o conteúdo. É o relato de uma pessoa e mostra o que está em jogo. A decisão sobre a terra não é formulário que se refaz. E o problema ali não era falta de capacidade, era um papel escrito de um jeito que não foi pensado para quem ia assinar.</p><p>E para desenhar uma solução, a gente precisava saber para quem. E a partir da pesquisa, construímos duas personas. A gente tem o Zé de 53 anos. Ele planta em 5 hectares arredados só com combinado de boca. A dona Dora. Ela é secundária do brejo paraibano. Ela é dona da terra e cede uma parte a um sobrinho. O risco dela é outro, perder o controle da terra e gerar briga na família. Então, os dois querem clareza, mas por motivos diferentes.</p><p>Isso pesa na hora da nossa construção do app. Primeiro, quem explica o acordo costuma ser a outra parte. Um produtor contou que o patrão explicou o contrato por cima e ele confiou. Segundo, a gente percebe que eles decidem em família, né? Quem ajuda a ler esses contratos são netas, filhos. Terceiro, letra miúda, letra pequena, termo difícil. Cada achado virou regra do nosso projeto e foi dessa pesquisa que nasceu o Agro Nosso.</p><p>Em uma frase, ele explica o papel do campo em palavras simples com áudio e passo a passo. E a nossa assinatura diz o que ele entrega. A decisão continua com quem planta. Nós percebemos que o visual de marca de agronegócio tradicional, ele é mais corporativo e afasta quem a gente quer alcançar. Chegamos a quatro palavras. Próxima, didática, confiável e tecnológica. A logo é escrita à mão com letras tortas e orgânicas, como alguém que anota no caderno.</p><p>O agricultor com a prancheta e o cheque resume o app. A ideia do aplicativo AgroNosso surge de um problema simples. Pequenos produtores rurais recebem documentos importantes e não conseguem entender o que está escrito. O nosso aplicativo transforma isso em uma linguagem do dia a dia. As telas foram pensadas para quem tem pouca prática com tecnologia e utiliza o celular ao ar livre, com sol forte, internet estável. Por isso, cada tela tem uma ideia só, com poucos passos, textos curtos e botões grandes.</p><p>Assim, ninguém erra no toque. A acessibilidade veio desde o início. Todo conteúdo importante pode ser lido ou ouvido em áudio. O contraste segue o padrão WCA GAA, com fontes grandes, com bastante espaço entre as linhas e nada depende de cor. Erro e sucesso sempre aparecem com ícone e texto. Se algo der errado, o aplicativo explica com calma o que fazer sem culpar a pessoa. O app lê o documento, simplifica o texto e permite compartilhar com um familiar de confiança.</p><p>Foi assim que construímos o app, pensando primeiro na pessoa e depois na tela. Nós testamos o aplicativo e vimos que a persona um e a persona dois gostaram bastante da explicação. Segundo a persona dois, a explicação, a voz explicando ajudou bastante. Porém, a persona um e a persona dois acharam a letra pequena na tela inicial e também tiveram dificuldade em achar o ajuste do tamanho da fonte. E a persona dois também afirmou que em um dos usos do aplicativo ele não encontrou a data de assinatura no documento.</p><p>E com essas queixas nós ajustamos a configuração do tamanho da letra para ficar mais fácil de achar. Mostramos o que foi lido para que a pessoa possa conferir e investigamos essas datas não encontradas. Nossa Citizen Tech possui sete camadas linguagem, experiência, território, imersão, produto, alcance e revelação. O site da AgroNosso é a porta de entrada do nosso projeto. Ele leva a pessoa até o aplicativo de um jeito simples e acolhedor.</p><p>Organizamos o site da seguinte forma: quem somos, o que fazemos e como começar. Cada sessão tem uma ideia só e um botão principal fica em destaque. No site, utilizamos a mesma identidade visual do aplicativo. O site é leve e responsível, com um bom contraste, foco visível na navegação e texto alternativo nas imagens, além de a logo sempre nos levar de volta pra página inicial. Toda a nossa construção foi baseada nas 10 heurísticas de Nilsen e nos sete princípios de Gestalt e feito por meio de Vibe Code, usando o cloud Code, hospedando o nosso app no GitHub.</p><p>Além do aplicativo, pensamos em uma segunda forma de apoiar nossos pequenos produtores. O Agro Nosso Voz. Ele foi desenvolvido como uma proposta de dispositivo de bolso para as situações que os acordos acontecerem apenas na conversa. A ideia é de que ele funcione mesmo sem internet. Então, na construção do protótipo também pensamos na acessibilidade física. Assim, o AgroNosso não fica restrito a documentos escritos. Ele também considera a realidade de quem desenvolve seus acordos conversando.</p><p>Para a linguagem, nós utilizamos Motion Graphics no After Effects para fazer um vídeo animado que apresenta o problema, a solução e o impacto gerado. Já para a imersão, nós usamos a Unreal Engine para produzir um ambiente 3D em tempo real, que mostra onde e como o AgroNosso é utilizado. Na parte território Filmmaking desenvolvemos um filme de aproximadamente 3 minutos. A narrativa acompanha dona Nilza, uma personagem fictícia que representa um produtor rural e utiliza o agronos em sua jornada.</p><p>Já na parte 3D Animation, escolhemos desenvolver um produto reavel, ou seja, uma apresentação do AgroNosso como produto tecnológico. Com essa segunda produção, queremos valorizar visualmente o Agro Nosso e apresentar sua identidade como uma solução digital. Um produto só existe de verdade se chegar a quem precisa. Por isso, a campanha de lançamento parte de um insight. Perguntar não é desconfiar. Ela convida a todos a esclarecer o combinado antes de assumir o compromisso.</p><p>Então, propomos três creators, cada um com uma função. A Media emergente é o canal do WhatsApp com áudio curto por semana, porque o áudio é o formato que esse público já usa no dia a dia. O plano de lançamento não é uma campanha publicada, porque a preparação tá prevista a partir do dia 30 de novembro e o lançamento para dia 14 de dezembro. E para encerrar, queremos falar sobre o impacto que esperamos gerar com a AgroNosso.</p><p>E para avaliar se estamos caminhando nessa direção, estabelecemos dois indicadores, compreensão e autonomia. Na compreensão, queremos observar se a pessoa consegue explicar com as próprias palavras os principais pontos de acordo. Na autonomia, queremos entender se a pessoa depois de utilizar a solução, ela consegue formular perguntas e levar essas informações para conversar com outra parte ou com alguém de confiança. O projeto também se conecta com os três objetivos de desenvolvimento da ONU: A ODS 2, fome zero e agricultura sustentável.</p><p>a ODS 9: indústria, inovação, infraestrutura, e a ODS 10: redução das desigualdades. Mas para que essa tecnologia seja realmente útil, ela também precisa gerar confiança e por isso estabelecemos compromissos de privacidade. A foto do documento é processada no próprio celular, ela não é enviada. Então, os nossos dados, os dados dos pequenos agricultores não serão utilizados para treinar inteligência artificial. O uso de IA generativa foi na construção do site, do aplicativo e do protótipo.</p><p>Também deixamos claro que o AgroNosso é uma ferramenta de apoio informativo. O nosso objetivo é que as pessoas tenham mais informação para conversar, questionar e decidir por conta própria, porque antes de qualquer assinatura é importante entender o que foi combinado. Muito obrigada pela atenção.</p></div></details>
+        <div class="acoes"><a class="btn btn-main app-link" href="#" data-ic="phone">Abrir o aplicativo</a><a class="btn btn-line" href="https://youtu.be/3zkNlJjjeZY" target="_blank" rel="noopener" data-ic="play">Ver no YouTube<span class="sr"> (abre em outra aba)</span></a></div>
       </div>
     </article>
 
@@ -1472,7 +1586,7 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
           <div class="meta"><span class="camada">Território</span><span class="status pronto" data-ic="check">Vídeo pronto</span></div>
           <h3 id="h-film">Filmmaking &amp; Video Production</h3>
           <p>O filme que registra o problema, o lugar e as pessoas por trás dele. Pensamos cada cena antes de gravar, com voz próxima, cores do AgroNosso e uma personagem que lembra quem ouvimos em campo.</p>
-          <p class="aux">Dona Nilza é uma personagem fictícia do vídeo, usada para mostrar o app funcionando. As personas da pesquisa são Zé e Dona Dora.</p>
+          <p class="aux">3 min 23 s, com legenda na imagem. Dona Nilza é uma personagem fictícia do vídeo, usada para mostrar o app funcionando. As personas da pesquisa são Zé e Dona Dora.</p>
           <div class="acoes linkrow" data-key="film"></div>
         </div>
       </div>
@@ -1481,10 +1595,10 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
         <ol class="proc">
           <li><span><b>Proposta e referências.</b> O que o vídeo quer dizer e como deve parecer.</span></li>
           <li><span><b>Argumento.</b> A história, a partir de dois relatos ouvidos na Bahia.</span></li>
-          <li><span><b>Roteiro e decupagem.</b> 7 cenas, cerca de 4 min 20 s.</span></li>
+          <li><span><b>Roteiro e decupagem.</b> 7 cenas, planejadas com cerca de 4 min 20 s.</span></li>
           <li><span><b>Storyboard.</b> O vídeo desenhado antes de ser gravado.</span></li>
           <li><span><b>Proposta sonora.</b> Narração próxima, música discreta, sem melodrama.</span></li>
-          <li><span><b>Gravação e edição.</b> Concluídas.</span></li>
+          <li><span><b>Gravação e edição.</b> Concluídas. O filme final ficou com 3 min 23 s.</span></li>
         </ol>
       </div>
       <div class="txt">
@@ -1515,16 +1629,39 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
 
     <div class="small-cards">
       <article id="e-media" class="disc rv d1" aria-labelledby="h-media">
-        <div class="meta"><span class="camada">Alcance</span><span class="status breve" data-ic="clock">Em breve</span></div>
+        <div class="vbox ilus"><svg viewBox="0 0 640 360" role="img" aria-label="Ilustração: um celular com uma publicação do AgroNosso e balões com a frase “Entenda o papel antes de assinar. Compartilhe.”" preserveAspectRatio="xMidYMid slice">
+<rect width="640" height="360" fill="#263F35"/>
+<ellipse cx="90" cy="330" rx="190" ry="90" fill="#5F693B" opacity=".55"/><ellipse cx="600" cy="40" rx="150" ry="80" fill="#5F693B" opacity=".4"/>
+<rect x="60" y="28" width="176" height="304" rx="30" fill="#F4EFE4"/>
+<rect x="84" y="62" width="128" height="116" rx="16" fill="#E7DFCB"/>
+<circle cx="184" cy="92" r="15" fill="#E7A044"/>
+<path d="M84 150c22-20 38-22 58-8 14 10 28 8 46-10l24-6v52H84z" fill="#5F693B"/>
+<path d="M130 178v-30M130 158c-12-2-18-10-18-18 12 0 18 8 18 18Zm0-6c10-2 16-8 16-16-10 0-16 6-16 16Z" fill="none" stroke="#263F35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="84" y="196" width="112" height="11" rx="5.5" fill="#292A24"/><rect x="84" y="216" width="78" height="11" rx="5.5" fill="#292A24" opacity=".45"/>
+<g fill="#263F35"><circle cx="104" cy="272" r="18"/><circle cx="148" cy="272" r="18"/><circle cx="192" cy="272" r="18"/></g>
+<path d="M104 279l-8-8a5 5 0 0 1 8-6 5 5 0 0 1 8 6z" fill="#F4EFE4"/><path d="M143 264l12 8-12 8z" fill="#F4EFE4"/><path d="M186 276l12-4-12-4m0 0 4 4-4 4" fill="none" stroke="#F4EFE4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="276" y="48" width="320" height="84" rx="42" fill="#F4EFE4"/>
+<text x="436" y="102" text-anchor="middle" font-size="31" font-weight="700" fill="#263F35" style="font-family:var(--titulo)">Entenda o papel</text>
+<rect x="316" y="152" width="296" height="84" rx="42" fill="#E7A044"/>
+<text x="464" y="206" text-anchor="middle" font-size="31" font-weight="700" fill="#292A24" style="font-family:var(--titulo)">antes de assinar.</text>
+<rect x="276" y="256" width="236" height="68" rx="34" fill="#F4EFE4"/>
+<text x="394" y="299" text-anchor="middle" font-size="27" font-weight="600" fill="#5F693B" style="font-family:var(--titulo)">Compartilhe</text>
+<g fill="#F4EFE4"><circle cx="560" cy="290" r="14"/><circle cx="596" cy="262" r="10" opacity=".8"/><circle cx="600" cy="312" r="10" opacity=".8"/></g>
+<path d="M560 290l36-28M560 290l40 22" stroke="#F4EFE4" stroke-width="3" opacity=".8"/>
+</svg></div>
+        <div class="meta"><span class="camada">Alcance</span><span class="status pronto" data-ic="check">Pronto</span></div>
         <h3 id="h-media">Emerging Media &amp; Creator Economy</h3>
         <p>O plano de campanha que leva o AgroNosso até quem precisa: creators, canais, conceito, roteiro e peças.</p>
-        <div class="acoes linkrow" data-key="alcance"></div>
+        <div class="acoes"><button type="button" class="btn btn-verde doc-open" data-pdf="assets/campanha-agronosso.pdf" data-title="Campanha AgroNosso: estratégia de lançamento" data-dl="assets/campanha-agronosso.docx" data-ic="expand" aria-haspopup="dialog">Ler em tela cheia</button><a class="btn btn-line" href="assets/campanha-agronosso.docx" download data-ic="download">Baixar o documento</a></div>
+        <p class="aux">Documento Word, 9 páginas, 1,3 MB.</p>
       </article>
       <article id="e-vfx" class="disc rv d2" aria-labelledby="h-vfx">
-        <div class="meta"><span class="camada">Revelação</span><span class="status breve" data-ic="clock">Em breve</span></div>
+        <div class="vbox"><video controls preload="metadata" poster="assets/vfx-poster.jpg" playsinline aria-label="Animação 3D do AgroNosso, sem áudio"><source src="assets/vfx.mp4" type="video/mp4"></video></div>
+        <div class="meta"><span class="camada">Revelação</span><span class="status pronto" data-ic="check">Pronto</span></div>
         <h3 id="h-vfx">3D Animation &amp; VFX</h3>
         <p>A animação 3D que revela o produto com impacto de lançamento, com personagem animado.</p>
-        <div class="acoes linkrow" data-key="vfx"></div>
+        <p class="aux">22 segundos, sem áudio e sem falas.</p>
+        <details class="resumo"><summary>Ler o que aparece no vídeo</summary><p>Um anel de luz se abre sobre uma base e revela o celular com o app AgroNosso, em cima de pedestais. A câmera desce para uma propriedade rural com canteiros, mesas e uma fogueira. Sobre uma mesa de madeira aparecem o AgroNosso Voz e o celular. No fim, uma personagem acena ao lado de um celular gigante com o app aberto, no meio do pomar.</p></details>
       </article>
     </div>
   </div>
@@ -1534,8 +1671,8 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
 <section class="cta-final verde on-verde" aria-labelledby="h-final">
   <div class="wrap">
     <h2 id="h-final" class="rv">Chegou um papel? Entenda antes de assinar.</h2>
-    <p class="lead rv">Leva menos de um minuto, e dá para ouvir.</p>
-    <a class="btn btn-main app-link rv" href="#" data-ic="camera">Abrir o aplicativo</a>
+    <p class="lead rv">A leitura leva até 1 minuto, e dá para ouvir tudo.</p>
+    <a class="btn btn-main app-link rv" href="#" data-ic="phone">Abrir o aplicativo</a>
     <div class="cta-links rv"><a class="btn btn-line" href="#pitch" data-ic="play">Ver o pitch</a><a class="btn btn-line" href="#topo" data-ic="home">Voltar ao início</a></div>
   </div>
 </section>
@@ -1584,6 +1721,13 @@ html.pausa .hero-cta .btn-main,html.pausa .cta-final .btn-main{box-shadow:none}
   <button type="button" class="fs-close" id="fsClose" aria-label="Fechar tela cheia"></button>
   <div class="fs-box" id="fsBox"><div class="screen"></div></div>
   <p class="fs-info" id="fsInfo" aria-live="polite"></p>
+  <div class="fs-nav"><button type="button" class="btn btn-line" id="fsPrev">Voltar</button><button type="button" class="btn btn-main" id="fsNext">Próxima tela</button></div>
+</div>
+<div class="fs docfs" id="docfs" role="dialog" aria-modal="true" aria-labelledby="docTitle" hidden>
+  <button type="button" class="fs-close" id="docClose" aria-label="Fechar documento"></button>
+  <h2 class="fs-title" id="docTitle">Documento</h2>
+  <iframe id="docFrame" title="Documento" src="about:blank"></iframe>
+  <p class="fs-info"><a id="docAlt" href="#" target="_blank" rel="noopener">Não apareceu? Abrir em outra aba<span class="sr"> (abre em outra aba)</span></a> · <a id="docDl" href="#" download>Baixar o documento</a></p>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -1592,10 +1736,10 @@ document.documentElement.classList.add('js');
 /* ===== CONFIGURAÇÃO DA EQUIPE: cole os links aqui ===== */
 const CONFIG = {
   appUrl: "https://analuizalopesguedes-cyber.github.io/agronosso-app/",            // link do aplicativo (todos os botões "Abrir o aplicativo")
-  pitchUrl: "",          // link do vídeo pitch no YouTube
+  pitchUrl: "assets/pitch.mp4",          // link do vídeo pitch no YouTube
   appVideo: "assets/app-demo.mp4", // gravação de tela do app rolando
   filmUrl: "assets/filmmaking.mp4",           // link do vídeo de Filmmaking
-  links: { motion:"", produto:"https://docs.google.com/document/d/18dk1FEvLZnNK8pAyw6AFGVVMUu7LMKjMBF3sBBw9_aw/edit?usp=sharing", film:"", imersao:"", alcance:"", vfx:"" } // documentos de cada disciplina
+  links: { motion:"", produto:"https://docs.google.com/document/d/18dk1FEvLZnNK8pAyw6AFGVVMUu7LMKjMBF3sBBw9_aw/edit?usp=sharing", film:"https://fiapcom-my.sharepoint.com/:f:/g/personal/rm564048_fiap_com_br/IgADlZFbggy0TrNUwIVZjwWXAdEudTV7aj9oxbSrByRnRZ0?e=ggZ9XY", imersao:"", alcance:"", vfx:"" } // documentos de cada disciplina
 };
 /* ======================================================= */
 
@@ -1636,11 +1780,13 @@ eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy=
 think:'<path d="M12 3a6 6 0 00-3.500 10.900V17h7v-3.100A6 6 0 0012 3zM9.500 20.500h5"/>',
 talk:'<path d="M4 5h16v11H9l-5 4z"/>',
 bolt:'<path d="M13 2L5 14h6l-1 8 8-12h-6z"/>',
-flag:'<path d="M5 21V4h12l-2 4 2 4H5"/>'
+flag:'<path d="M5 21V4h12l-2 4 2 4H5"/>',
+expand:'<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+download:'<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>'
 };
 const ico=(n,s)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"${s?` style="width:${s}px;height:${s}px"`:''}>${IC[n]||''}</svg>`;
 function icons(root=document){ $$('[data-ic]',root).forEach(el=>{ if(el.dataset.icDone)return; el.dataset.icDone=1; el.insertAdjacentHTML('afterbegin',ico(el.dataset.ic)); }); }
-const toast=(msg)=>{const t=$('#toast');t.innerHTML=ico('alert')+'<span>'+msg+'</span>';t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),3600)};
+const toast=(msg,ic)=>{const t=$('#toast');t.innerHTML=ico(ic||'info')+'<span>'+msg+'</span>';t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),3600)};
 
 /* ---------- links editáveis ---------- */
 const get=k=>store.get('cfg:'+k)||CONFIG[k]||'';
@@ -1652,35 +1798,36 @@ function mountVideo(box,url,fallback){
   if(!url){slot(box,fallback);return}
   const y=ytEmbed(url);
   if(y){box.innerHTML=`<iframe src="${y}" title="${fallback.title}" allowfullscreen loading="lazy"></iframe>`}
-  else{const v=document.createElement('video');v.controls=true;v.playsInline=true;v.preload='metadata';if(fallback.poster)v.poster=fallback.poster;v.src=url;v.setAttribute('aria-label',fallback.title);v.onerror=()=>slot(box,fallback);box.appendChild(v)}
+  else{const v=document.createElement('video');v.controls=true;v.playsInline=true;v.preload='metadata';if(fallback.poster)v.poster=fallback.poster;v.src=url;if(fallback.track){const t=document.createElement('track');t.kind='captions';t.srclang='pt';t.label='Português';t.src=fallback.track;v.appendChild(t)}v.setAttribute('aria-label',fallback.title);v.onerror=()=>slot(box,fallback);box.appendChild(v)}
 }
 function linkRows(){
   $$('.linkrow').forEach(r=>{
     const k=r.dataset.key,u=getLink(k);
-    r.innerHTML=(u?`<a class="btn btn-verde" href="${u}" target="_blank" rel="noopener">${ico('ext')}Ver o documento</a>`:(r.hasAttribute('data-nodoc')?'':`<a class="btn" href="#" aria-disabled="true" data-nolink="doc">${ico('link')}Documento em breve</a>`))
+    const lab=/sharepoint\.com\/:f:|drive\.google\.com\/drive\/folders/.test(u)?'Ver a pasta do projeto':'Ver o documento';
+    r.innerHTML=(u?`<a class="btn btn-verde" href="${u}" target="_blank" rel="noopener">${ico('ext')}${lab}<span class="sr"> (abre em outra aba)</span></a>`:(r.hasAttribute('data-nodoc')?'':`<a class="btn" href="#" aria-disabled="true" data-nolink="doc">${ico('link')}Documento em breve</a>`))
      +`<a class="btn btn-line app-link" href="#">${ico('phone')}Abrir o aplicativo</a>`
      +`<div class="edit-links"><label for="l-${k}">Link do documento: ${k}</label><input id="l-${k}" type="url" placeholder="https://..." value="${store.get('link:'+k)||CONFIG.links[k]||''}"></div>`;
-    $('input',r).addEventListener('change',e=>{store.set('link:'+k,e.target.value.trim());linkRows();toast('Link salvo neste navegador.')});
+    $('input',r).addEventListener('change',e=>{store.set('link:'+k,e.target.value.trim());linkRows();toast('Link salvo neste navegador.','check')});
   });
   appLinks();
 }
 function appLinks(){
   const u=get('appUrl');
   $$('.app-link').forEach(a=>{
-    if(u){a.href=u;a.target='_blank';a.rel='noopener';a.removeAttribute('aria-disabled')}
+    if(u){a.href=u;a.target='_blank';a.rel='noopener';a.removeAttribute('aria-disabled');if(!$('.sr',a))a.insertAdjacentHTML('beforeend','<span class="sr"> (abre em outra aba)</span>')}
     else{a.href='#';a.removeAttribute('target')}
     a.onclick=u?null:(e)=>{e.preventDefault();toast('O aplicativo abre em breve. Enquanto isso, veja como ele funciona na seção 3.')};
   });
-  $$('[data-nolink]').forEach(a=>a.onclick=e=>{e.preventDefault();toast('Este documento ainda não foi publicado.')});
+  $$('[data-nolink]').forEach(a=>a.onclick=e=>{e.preventDefault();toast('Este documento ainda não foi publicado.','alert')});
 }
 function media(){
-  mountVideo($('#pitchBox'),get('pitchUrl'),{icon:'play',title:'Vídeo pitch',text:'Até 5 minutos, no YouTube como não listado, com legendas.'});
+  mountVideo($('#pitchBox'),get('pitchUrl'),{icon:'play',poster:'assets/pitch-poster.jpg',track:'assets/pitch.vtt',title:'Vídeo pitch',text:'O vídeo não carregou aqui. Use o botão “Ver no YouTube”.'});
   mountVideo($('#filmBox'),get('filmUrl'),{icon:'film',poster:'assets/filmmaking-poster.jpg',title:'Vídeo de Filmmaking',text:'O filme está pronto. Assim que o link for colocado, ele aparece aqui.'});
 }
 function bindEditBar(){
   [['in-app','appUrl'],['in-yt','pitchUrl'],['in-appvideo','appVideo'],['in-film','filmUrl']].forEach(([id,k])=>{
     const i=$('#'+id);i.value=store.get('cfg:'+k)||CONFIG[k]||'';
-    i.addEventListener('change',()=>{store.set('cfg:'+k,i.value.trim());appLinks();media();setMode(mode);toast('Salvo neste navegador.')});
+    i.addEventListener('change',()=>{store.set('cfg:'+k,i.value.trim());appLinks();media();setMode(mode);toast('Salvo neste navegador.','check')});
   });
 }
 
@@ -1768,7 +1915,7 @@ const screens=[
 ];
 function bindScreen(root,go,me){if(me===undefined)me=cur;
   $$('[data-go]',root).forEach(b=>b.addEventListener('click',()=>go(+b.dataset.go)));
-  $$('[data-soon]',root).forEach(b=>b.addEventListener('click',()=>toast('Nesta prévia, siga os passos ao lado do celular.')));
+  $$('[data-soon]',root).forEach(b=>b.addEventListener('click',()=>toast('Nesta prévia, este botão não abre. Siga pelo botão em destaque ou por “Próxima tela”. Para usar tudo, abra o app de verdade.')));
   $$('.ap-acc>button',root).forEach(b=>b.addEventListener('click',()=>{const a=b.parentElement;a.classList.toggle('open');b.setAttribute('aria-expanded',a.classList.contains('open'))}));
   const opts=$$('.ap-opt',root),cont=$('#apCont',root);
   opts.forEach(o=>o.addEventListener('click',()=>{opts.forEach(x=>{x.classList.toggle('sel',x===o);x.setAttribute('aria-checked',x===o)});cont.disabled=false;$('#apHint',root).hidden=true}));
@@ -1837,6 +1984,7 @@ function renderEmp(){
   $('#empatia').innerHTML=d.q.map(([i,t,l])=>`<div class="q ${t==='Dores'?'dor':t==='Ganhos'?'ganho':''}"><h4><span class="bd">${ico(i)}</span>${t}</h4><ul>${l.map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
   $('#tensao').textContent=d.tensao;
   renderCurve();
+  if(typeof accEmp==='function'&&window.__accReady)accEmp();
 }
 function renderCurve(){
   const d=EMP[pk].j,X=i=>96+i*110,Y=e=>150-e*46;
@@ -1845,19 +1993,22 @@ function renderCurve(){
   const gl=[[2,'Bem'],[0,'Neutro'],[-2,'Mal']];
   $('#curve').innerHTML=gl.map(([e,t])=>`<line x1="20" x2="700" y1="${Y(e)}" y2="${Y(e)}" stroke="rgba(38,63,53,.2)" stroke-dasharray="${e===0?'0':'4 6'}"/><text x="4" y="${Y(e)-8}" font-size="13" fill="#5F693B">${t}</text>`).join('')
    +`<path d="${path}" fill="none" stroke="#263F35" stroke-width="4" stroke-linecap="round" id="cpath"/>`
-   +d.map((p,i)=>{const cy=Y(p[1]);return `<g class="pt" tabindex="0" role="button" aria-label="${i+1}. ${p[0]}: ${p[2]}" data-i="${i}"><circle class="ring" cx="${X(i)}" cy="${cy}" r="20" fill="${i===jp?'#E7A044':'#F4EFE4'}" stroke="#263F35" stroke-width="3"/><text x="${X(i)}" y="${cy+6}" text-anchor="middle" font-size="17" font-weight="700" fill="#292A24">${i+1}</text><line x1="${X(i)}" x2="${X(i)}" y1="${cy+22}" y2="284" stroke="rgba(38,63,53,.18)" stroke-dasharray="2 5"/><text class="lbl" x="${X(i)}" y="302" text-anchor="middle" font-size="15" fill="#263F35" font-weight="600">${p[2]}</text>${two(p[0]).map((l,k)=>`<text x="${X(i)}" y="${328+k*18}" text-anchor="middle" font-size="13" fill="#292A24">${l}</text>`).join('')}</g>`}).join('');
+   +d.map((p,i)=>{const cy=Y(p[1]);return `<g class="pt" tabindex="0" role="button" aria-pressed="${i===jp}" aria-label="Etapa ${i+1}. ${p[0]}: ${p[2]}" data-i="${i}"><circle class="halo" cx="${X(i)}" cy="${cy}" r="27"/><circle class="ring" cx="${X(i)}" cy="${cy}" r="20" fill="${i===jp?'#E7A044':'#F4EFE4'}" stroke="#263F35" stroke-width="3"/><text x="${X(i)}" y="${cy+6}" text-anchor="middle" font-size="17" font-weight="700" fill="#292A24">${i+1}</text><line x1="${X(i)}" x2="${X(i)}" y1="${cy+22}" y2="284" stroke="rgba(38,63,53,.18)" stroke-dasharray="2 5"/><text class="lbl" x="${X(i)}" y="302" text-anchor="middle" font-size="15" fill="#263F35" font-weight="600">${p[2]}</text>${two(p[0]).map((l,k)=>`<text class="nm" x="${X(i)}" y="${328+k*18}" text-anchor="middle" font-size="13" fill="#292A24">${l}</text>`).join('')}</g>`}).join('');
   $$('#curve .pt').forEach(g=>{const f=()=>{jp=+g.dataset.i;renderCurve();};g.addEventListener('click',f);g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();f();$$('#curve .pt')[jp].focus()}})});
+  $('#jlist').innerHTML=d.map((q,i)=>`<li><button type="button" data-i="${i}" aria-pressed="${i===jp}"><span class="n">${i+1}</span><span><b>${q[0]}</b> · ${q[2]}</span></button></li>`).join('');
+  $$('#jlist button').forEach(b=>b.onclick=()=>{jp=+b.dataset.i;renderCurve();$$('#jlist button')[jp].focus()});
+  $$('.jname').forEach(x=>x.textContent=EMP[pk].nome);
   const p=d[jp];$('#jdet').innerHTML=`<div><h4>${jp+1}. ${p[0]}: ${p[2]}</h4><p class="aux" style="color:var(--carvao)"><strong>Atrito.</strong> ${p[3]}</p></div><div class="opp"><h4>Oportunidade</h4><p>${p[4]}</p></div>`;
   const path_=$('#cpath');if(path_&&!RM&&!renderCurve.want)path_.style.opacity=0;if(path_&&renderCurve.want&&!renderCurve.done){const L=path_.getTotalLength();path_.style.strokeDasharray=L;path_.style.strokeDashoffset=L;path_.getBoundingClientRect();path_.style.transition='stroke-dashoffset 1.2s ease';path_.style.strokeDashoffset=0;renderCurve.done=1}
 }
-$$('.seg button').forEach(b=>b.onclick=()=>{pk=b.dataset.p;jp=0;renderCurve.done=0;renderCurve.want=1;$$('.seg button').forEach(x=>x.setAttribute('aria-pressed',x===b));renderEmp()});
+$$('.seg button').forEach(b=>b.onclick=()=>{pk=b.dataset.p;jp=0;renderCurve.done=0;renderCurve.want=1;$$('.seg button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.p===pk));renderEmp()});
 
 /* ---------- testes ---------- */
 
 /* ---------- navegação ---------- */
-const mb=$('#menuBtn');mb.innerHTML=ico('menu');
-mb.onclick=()=>{const o=$('#nav').classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.innerHTML=ico(o?'close':'menu')};
-$$('#nav a').forEach(a=>a.addEventListener('click',()=>{$('#nav').classList.remove('open');mb.setAttribute('aria-expanded',false);mb.innerHTML=ico('menu')}));
+const mb=$('#menuBtn');const mbI=o=>'<span class="mb-c" aria-hidden="true">'+ico(o?'close':'menu')+'</span>';mb.innerHTML=mbI(false);
+mb.onclick=()=>{const o=$('#nav').classList.toggle('open');mb.setAttribute('aria-expanded',o);mb.setAttribute('aria-label',o?'Fechar menu':'Abrir menu');mb.innerHTML=mbI(o)};
+$$('#nav a').forEach(a=>a.addEventListener('click',()=>{$('#nav').classList.remove('open');mb.setAttribute('aria-expanded',false);mb.setAttribute('aria-label','Abrir menu');mb.innerHTML=mbI(false)}));
 const secs=['ficha','pesquisa','solucao','teste','entregas'].map(id=>document.getElementById(id));
 let tlLast=null,tlT=0,tlVis=false;
 function tlSet(off,keep){document.documentElement.classList.toggle('no-tl',off);if(!keep)store.set('tl',off?'off':'on');
@@ -1871,7 +2022,7 @@ function railUpdate(a,end){const r=$('#tl');if(!r)return;const k=secs.findIndex(
 $('#tlOff').innerHTML=ico('x');$('#tlOn').innerHTML=ico('chev');
 $('#tlOff').onclick=()=>{tlSet(true);toast('Barra lateral escondida. Para voltar, use a setinha na borda ou o menu.')};
 $('#tlOn').onclick=()=>tlSet(false);
-$('#tlMenu').onclick=()=>{tlSet(!document.documentElement.classList.contains('no-tl'));$('#nav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded',false);$('#menuBtn').innerHTML=ico('menu')};
+$('#tlMenu').onclick=()=>{tlSet(!document.documentElement.classList.contains('no-tl'));$('#nav').classList.remove('open');$('#menuBtn').setAttribute('aria-expanded',false);$('#menuBtn').innerHTML=mbI(false)};
 tlSet(store.get('tl')==='off',true);
 $$('#tl a').forEach(l=>l.addEventListener('click',e=>{if(l.classList.contains('cur')){e.preventDefault();tlSay(2800)}}));
 function onScroll(){
@@ -1930,9 +2081,16 @@ function fsRender(){
   sc.innerHTML='<div class="av swap">'+screens[fsI].html()+'</div>';
   bindScreen(sc,i=>{fsI=i;if(fsFrom==='stage'){cur=i;renderPhone()}fsRender()},fsI);
   $('#fsInfo').textContent='Tela '+(fsI+1)+' de 5: '+screens[fsI].nome;
+  $('#fsPrev').disabled=fsI===0;$('#fsNext').textContent=fsI>=4?'Recomeçar':'Próxima tela';
 }
 function fsOpen(from){fsFrom=from;fsI=from==='stage'?cur:4;fsPrev=document.activeElement;const d=$('#fs');d.hidden=false;document.body.style.overflow='hidden';fsRender();$('#fsClose').focus()}
 function fsClose(){$('#fs').hidden=true;document.body.style.overflow='';if(fsPrev&&fsPrev.focus)fsPrev.focus()}
+$('#docClose').innerHTML=ico('x');
+let docBtn=null;
+function docOpen(b){docBtn=b;const pdf=b.dataset.pdf,t=b.dataset.title;$('#docTitle').textContent=t;$('#docFrame').title=t;$('#docAlt').href=pdf;$('#docDl').href=b.dataset.dl||pdf;$('#docFrame').src=pdf+'#view=FitH';$('#docfs').hidden=false;document.body.style.overflow='hidden';$('#docClose').focus()}
+function docClose(){$('#docfs').hidden=true;$('#docFrame').src='about:blank';document.body.style.overflow='';if(docBtn)docBtn.focus()}
+$$('.doc-open').forEach(b=>b.onclick=()=>docOpen(b));$('#docClose').onclick=docClose;
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#docfs').hidden)docClose()});
 $('#fsClose').innerHTML=ico('x');$('#fsClose').onclick=fsClose;
 $('#fs').addEventListener('click',e=>{if(e.target.id==='fs')fsClose()});
 addEventListener('keydown',e=>{
@@ -1944,16 +2102,52 @@ addEventListener('keydown',e=>{
     else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}
     else if(!$('#fs').contains(document.activeElement)){e.preventDefault();a.focus()}}});
 addEventListener('resize',()=>{if(!$('#fs').hidden)fsRender()});
+function fsGo(i){fsI=i;if(fsFrom==='stage'){cur=i;renderPhone()}fsRender()}
+$('#fsPrev').onclick=()=>{if(fsI>0)fsGo(fsI-1)};$('#fsNext').onclick=()=>fsGo(fsI>=4?0:fsI+1);
+$('#docfs').addEventListener('click',e=>{if(e.target.id==='docfs')docClose()});
+addEventListener('keydown',e=>{if($('#docfs').hidden||e.key!=='Tab')return;const f=[...$('#docfs').querySelectorAll('button,a[href],iframe')].filter(x=>x.offsetParent!==null);if(!f.length)return;const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}});
 $('#fsStage').onclick=()=>fsOpen('stage');$('#fsHero').onclick=()=>fsOpen('hero');
-$('#fsStage').innerHTML=ico('ext')+'Ver o celular em tela cheia';$('#fsHero').innerHTML=ico('ext')+'Ver o celular em tela cheia';
+$('#fsStage').innerHTML=ico('expand')+'Ver o celular em tela cheia';$('#fsHero').innerHTML=ico('expand')+'Ver o celular em tela cheia';$('#fsStage').setAttribute('aria-haspopup','dialog');$('#fsHero').setAttribute('aria-haspopup','dialog');
+
+/* ---------- recolher conteúdo (dropdowns) ---------- */
+const MQ=matchMedia('(max-width:760px)');const ACC=[];let accN=0;
+function acc(el,o){if(!el||el.classList.contains('macc'))return;
+  const head=o.head?el.querySelector(o.head):null;let kids;
+  if(o.body)kids=[...el.children].filter(c=>c.matches(o.body));
+  else{const top=[...el.children].find(c=>c===head||c.contains(head));kids=[...el.children].slice([...el.children].indexOf(top)+1)}
+  if(!kids.length)return;
+  const body=document.createElement('div');body.className='macc-b';body.id='macc'+(accN++);kids[0].before(body);kids.forEach(k=>body.appendChild(k));
+  el.classList.add('macc',o.mode||'m');ACC.push({el,head,body,o,html:head?head.innerHTML:null,btn:null,init:0});}
+function accSet(it,on){it.el.classList.toggle('open',on);if(it.btn)it.btn.setAttribute('aria-expanded',on)}
+function accApply(){const mob=MQ.matches;
+  for(let i=ACC.length-1;i>=0;i--)if(!document.body.contains(ACC[i].el))ACC.splice(i,1);
+  ACC.forEach(it=>{const on=it.o.mode==='all'||mob;
+    if(it.head){
+      if(on&&!it.btn){it.head.innerHTML=`<button type="button" class="macc-t" aria-controls="${it.body.id}">${it.html}<span class="macc-chev" aria-hidden="true">${ico('chev')}</span></button>`;it.btn=it.head.firstElementChild;it.btn.onclick=()=>accSet(it,!it.el.classList.contains('open'))}
+      else if(!on&&it.btn){it.head.innerHTML=it.html;it.btn=null}
+    }else{
+      if(!it.btn){const b=document.createElement('button');b.type='button';b.className='macc-x';b.setAttribute('aria-controls',it.body.id);b.innerHTML=`<span>${it.o.label}</span>${ico('chev')}`;b.onclick=()=>accSet(it,!it.el.classList.contains('open'));it.body.before(b);it.btn=b}
+      it.btn.hidden=!on}
+    if(!it.init){accSet(it,!!it.o.open);it.init=1}else accSet(it,it.el.classList.contains('open'));
+  })}
+function accEmp(){$$('#empatia .q').forEach(q=>acc(q,{head:'h4',mode:'all'}));accApply()}
+function accSetup(){
+  $$('.ficha .cell').forEach(c=>{if(c.id==='privacidade'||c.classList.contains('hl'))return;acc(c,{head:'h4',mode:'all'})});
+  $$('.personas .persona').forEach(p=>acc(p,{body:'dl',label:'Ver terra, renda, família e medo',mode:'m'}));
+  $$('.testes .tcard').forEach(t=>{acc($('.mudou',t),{head:'dt',mode:'all'});acc(t,{body:'dl',label:'Ver os detalhes do teste',mode:'m'})});
+  $$('#e-film > .txt').filter(t=>t.querySelector(':scope > h4')).forEach((t,i)=>acc(t,{head:'h4',mode:i===0?'all':'m'}));
+  accApply();
+}
+MQ.addEventListener?MQ.addEventListener('change',accApply):MQ.addListener(accApply);
+document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const t=document.getElementById(a.getAttribute('href').slice(1));if(!t)return;const it=ACC.find(x=>x.el===t||x.el.contains(t));if(it)accSet(it,true)});
 
 /* ---------- iniciar ---------- */
-icons();renderEmp();renderPhone();linkRows();bindEditBar();media();restoreEdits();
+icons();renderEmp();renderPhone();linkRows();bindEditBar();media();restoreEdits();accSetup();window.__accReady=1;accEmp();
 
 /* ---------- letra maior ---------- */
 const TS=[1,1.15,1.3],TL=['Aumentar a letra','Aumentar mais','Voltar ao normal'],TA=['A+','A++','A−'],TS_=['Letra +','Letra ++','Normal'],TN=['normal','maior','bem maior'];
 let tsi=+(store.get('ts')||0);if(!(tsi>=0&&tsi<3))tsi=0;
-function applyTs(say){document.documentElement.style.setProperty('--ts',TS[tsi]);$('#tsizeLabel').textContent=TL[tsi];$('#tsizeLabel').dataset.s=TS_[tsi];$('#tsizeAa').textContent=TA[tsi];$('#tsize').setAttribute('aria-label','Mudar o tamanho da letra. Agora: '+TN[tsi]);if(say)toast('Letra '+TN[tsi]+'.');}
+function applyTs(say){document.documentElement.style.setProperty('--ts',TS[tsi]);$('#tsizeLabel').textContent=TL[tsi];$('#tsizeLabel').dataset.s=TS_[tsi];$('#tsizeAa').textContent=TA[tsi];$('#tsize').setAttribute('aria-label','Mudar o tamanho da letra. Agora: '+TN[tsi]);if(say)toast('Letra '+TN[tsi]+'.','check');}
 $('#tsize').addEventListener('click',()=>{tsi=(tsi+1)%3;store.set('ts',tsi);applyTs(true)});applyTs(false);
 /* ---------- Libras (VLibras) ---------- */
 let vlOk=false;
